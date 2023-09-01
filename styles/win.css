@@ -175,3 +175,8 @@ p, ul{
         padding-left: 0em !important;
     }
 }
+
+#calendar_section {
+    max-width: 1000px;
+    margin: auto;
+}
