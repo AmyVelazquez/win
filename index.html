@@ -155,7 +155,7 @@
           time.utc.forEach((timezone) => {
             const option = document.createElement("option");
             option.value = timezone;
-            option.innerText = timezone;
+            option.innerText = timezone + " (" + time.abbr + ")";
             timezoneSelect.appendChild(option);
           });
         });
