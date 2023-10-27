@@ -70,103 +70,6 @@
       fathom("trackPageview");
     </script>
     <!-- / Fathom -->
-
-    <!-- Calendar -->
-    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/min/moment.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.40/builds/moment-timezone-with-data.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-    <!-- the connector. must go AFTER moment-timezone -->
-    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/moment-timezone@6.1.8/index.global.min.js"></script>
-    <script>
-      //will get all timezones featured
-      async function GetTimezones() {
-        try {
-          const req = await fetch("/timezones.json");
-          const data = await req.json();
-
-          return data;
-        } catch (e) {
-          console.log(e);
-          return null;
-        }
-      }
-
-      document.addEventListener("DOMContentLoaded", async function () {
-        var calendarEl = document.getElementById("calendar");
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: "listMonth",
-          headerToolbar : false,
-          events: [
-            {
-              start: "2023-09-06T11:00:00Z",
-              end: "2023-10-06T11:00:00Z",
-              display: "list-item",
-              daysOfWeek: [3],
-              startTime: "11:00",
-              endTime: "12:00",
-              title: "SEP Cohort 11am (EST) Session",
-              color: "#8c9b28",
-              url: "https://docs.google.com/spreadsheets/d/15gXXjtY3JpIyx_bRc4qNyEQlSgeDrhAnWNJBNT30S4s/edit#gid=1947193986",
-            },
-            {
-              start: "2023-09-06T18:00:00Z",
-              end: "2023-10-06T19:00:00Z",
-              display: "list-item",
-              daysOfWeek: [3],
-              startTime: "18:00",
-              endTime: "19:00",
-              title: "SEP Cohort 6pm (EST) Session",
-              color: "#8c9b28",
-              url: "https://docs.google.com/spreadsheets/d/15gXXjtY3JpIyx_bRc4qNyEQlSgeDrhAnWNJBNT30S4s/edit#gid=1947193986",
-            },
-            {
-              start: "2023-09-06T13:00:00Z",
-              end: "2023-10-06T14:00:00Z",
-              display: "list-item",
-              daysOfWeek: [3],
-              startTime: "13:00",
-              endTime: "14:00",
-              title: "JUN/JULY/AUG Cohort 1pm (EST) Session",
-              color: "#8c9b28",
-              url: "https://docs.google.com/spreadsheets/d/15gXXjtY3JpIyx_bRc4qNyEQlSgeDrhAnWNJBNT30S4s/edit#gid=1947193986",
-            },
-            {
-              start: "2023-09-06T19:30:00Z",
-              end: "2023-10-06T20:30:00Z",
-              display: "list-item",
-              daysOfWeek: [3],
-              startTime: "19:30",
-              endTime: "20:30",
-              title: "JUN/JULY/AUG Cohort 7:30pm (EST) Session",
-              color: "#8c9b28",
-              url: "https://docs.google.com/spreadsheets/d/15gXXjtY3JpIyx_bRc4qNyEQlSgeDrhAnWNJBNT30S4s/edit#gid=1947193986",
-            },
-          ],
-        });
-
-        calendar.render();
-
-        const timezoneSelect = document.getElementById("timezone_select");
-
-        //populate the timezone select with all the values
-        const timezoneValues = await GetTimezones();
-        console.log(timezoneValues);
-        timezoneValues.forEach((time) => {
-          time.utc.forEach((timezone) => {
-            const option = document.createElement("option");
-            option.value = timezone;
-            option.innerText = timezone + " (" + time.abbr + ")";
-            timezoneSelect.appendChild(option);
-          });
-        });
-
-        timezoneSelect.addEventListener("change", (e) => {
-          console.log(e.target.value);
-          calendar.setOption("timeZone", e.target.value);
-        });
-      });
-    </script>
-    <!-- Calendar -->
   </head>
 
   <body>
@@ -219,16 +122,6 @@
             </div>
           </div>
         </div>
-      </section>
-
-      <section style="width: 100%" id="calendar_section">
-        <p>Check the calendar below and find event times</p>
-        <p>Select your timezone</p>
-        <select id="timezone_select">
-          <option value="local">Local</option>
-        </select>
-        <!-- CALENDAR RENDERS HERE -->
-        <div id="calendar"></div>
       </section>
 
       <section class="introStatementsB">

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="styles/styles.css?ver=1.3" />
+    <link rel="stylesheet" href="styles/win.css?ver=1.3" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+
+    <meta
+      property="og:title"
+      content="How to Win Stakeholders and Influence Decisions!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://WinStakeholders.com/" />
+    <title>How to Win Stakeholders and Influence Decisions October Cohort Schedule</title>
+    <meta
+      name="description"
+      content="How to Win Stakeholders and Influence Decisions!"
+    />
+    <meta
+      property="og:image"
+      content="https://winstakeholders.com/images/og.png"
+    />
+
+    <meta property="og:site_name" content="Win Stakeholders" />
+
+    <meta
+      property="og:description"
+      content="A 16-week program for new and experienced UX Leaders ready to influence meaningful improvements in their organization’s products and services.
+    What if you could convince your toughest stakeholders that your work will drive innovation?"
+    />
+
+    <!-- <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
+    <script>
+      (function (f, a, t, h, o, m) {
+        a[h] =
+          a[h] ||
+          function () {
+            (a[h].q = a[h].q || []).push(arguments);
+          };
+        (o = f.createElement("script")),
+          (m = f.getElementsByTagName("script")[0]);
+        o.async = 1;
+        o.src = t;
+        o.id = "fathom-script";
+        m.parentNode.insertBefore(o, m);
+      })(document, window, "//stats.uie.com/tracker.js", "fathom");
+      fathom("set", "siteId", "NJOLI");
+      fathom("trackPageview");
+    </script>
+    <!-- / Fathom -->
+
+    <!-- Calendar -->
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/min/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment-timezone@0.5.40/builds/moment-timezone-with-data.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <!-- the connector. must go AFTER moment-timezone -->
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/moment-timezone@6.1.8/index.global.min.js"></script>
+    <script>
+      //will get all timezones featured
+      async function GetTimezones() {
+        try {
+          const req = await fetch("/timezones.json");
+          const data = await req.json();
+
+          return data;
+        } catch (e) {
+          console.log(e);
+          return null;
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", async function () {
+        // LONELY CALENDAR
+        var lonelyCalendarEl = document.getElementById("lonely_calendar");
+        var lonelyCalendar = new FullCalendar.Calendar(lonelyCalendarEl, {
+          initialView: "listMonth",
+          headerToolbar: false,
+          views: {
+            listMonth: {
+              duration: { months: 2 }, // Display events for 2 months
+            },
+          },
+          events: [
+            {
+              daysOfWeek: [3],
+              startTime: "11:00",
+              endTime: "12:00",
+              startRecur: new Date(2023, 9, 25).toISOString(),
+              endRecur: new Date(2023, 10, 25).toISOString(),
+              title: "OCT Cohort 11am (EST) Session",
+              color: "#8c9b28",
+              url: "",
+            },
+            {
+              daysOfWeek: [3],
+              startTime: "18:00",
+              endTime: "19:00",
+              startRecur: new Date(2023, 9, 25).toISOString(),
+              endRecur: new Date(2023, 10, 25).toISOString(),
+              title: "OCT Cohort 6pm (EST) Session",
+              color: "#8c9b28",
+              url: "",
+            },
+          ],
+        });
+
+        // GROUP CALENDAR
+        var groupCalendarEl = document.getElementById("group_calendar");
+        var groupCalendar = new FullCalendar.Calendar(groupCalendarEl, {
+          initialView: "listMonth",
+          headerToolbar: false,
+          views: {
+            listMonth: {
+              duration: { months: 4 },
+            },
+          },
+          events: [
+            {
+              daysOfWeek: [3],
+              startTime: "11:00",
+              endTime: "12:00",
+              startRecur: new Date(2023, 10, 25).toISOString(),
+              endRecur: new Date(2024, 0, 25).toISOString(),
+              title: "OCT Cohort 11am (EST) Session",
+              color: "#8c9b28",
+              url: "",
+            },
+            {
+              daysOfWeek: [3],
+              startTime: "18:00",
+              endTime: "19:00",
+              startRecur: new Date(2023, 10, 25).toISOString(),
+              endRecur: new Date(2024, 0, 25).toISOString(),
+              title: "OCT Cohort 6pm (EST) Session",
+              color: "#8c9b28",
+              url: "",
+            },
+          ],
+        });
+
+        // WRAP UP CALENDAR
+        var wrapUpCalendarEl = document.getElementById("wrapup_calendar");
+        var wrapUpCalendar = new FullCalendar.Calendar(wrapUpCalendarEl, {
+          initialView: "listMonth",
+          headerToolbar: false,
+          views: {
+            listMonth: {
+              duration: { months: 4 },
+            },
+          },
+          events: [
+            {
+              start: "2024-01-12T13:00:00",
+              end: "2024-01-12T14:00:00",
+              title: "OCT Cohort Wrap Up Session",
+              color: "#8c9b28",
+              url: "",
+            },
+          ],
+        });
+
+        lonelyCalendar.render();
+        groupCalendar.render();
+        wrapUpCalendar.render();
+
+        const timezoneSelect =
+          document.getElementsByClassName("timezone_select");
+
+        //populate the timezone select with all the values
+        const timezoneValues = await GetTimezones();
+        timezoneValues.forEach((time) => {
+          time.utc.forEach((timezone) => {
+            const option = document.createElement("option");
+            option.value = timezone;
+            option.innerText = timezone + " (" + time.abbr + ")";
+            timezoneSelect[0].appendChild(option);
+          });
+        });
+        timezoneValues.forEach((time) => {
+          time.utc.forEach((timezone) => {
+            const option = document.createElement("option");
+            option.value = timezone;
+            option.innerText = timezone + " (" + time.abbr + ")";
+            timezoneSelect[1].appendChild(option);
+          });
+        });
+        timezoneValues.forEach((time) => {
+          time.utc.forEach((timezone) => {
+            const option = document.createElement("option");
+            option.value = timezone;
+            option.innerText = timezone + " (" + time.abbr + ")";
+            timezoneSelect[2].appendChild(option);
+          });
+        });
+
+        timezoneSelect[0].addEventListener("change", (e) => {
+          lonelyCalendar.setOption("timeZone", e.target.value);
+        });
+        timezoneSelect[1].addEventListener("change", (e) => {
+          groupCalendar.setOption("timeZone", e.target.value);
+        });
+        timezoneSelect[2].addEventListener("change", (e) => {
+          wrapUpCalendar.setOption("timeZone", e.target.value);
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <section id="header">
+      <div class="bg-lightGray">
+        <div class="topbar container-cc">
+          <div>
+            <img
+              src="/images/CC-UIE-black-logo.png"
+              class="img-resp"
+              alt="CenterCentre Logo"
+              style="padding-right: 20px"
+            />
+          </div>
+          <div class="">
+            <a class="btn btn-custom btn-shadow" href="#pricing">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="calendar_section">
+      <h1 style="margin-top: 30px">October 2023 Cohort Live Lab Schedule</h1>
+      <p>Here is what the schedule for our upcoming cohort looks like.</p>
+      <p>
+        <b
+          >For the first four weeks of the program, Jared meets with just your
+          cohort of program members live every Wednesday.</b
+        >
+        You can join a second session offered to benefit folks in later time
+        zones.
+      </p>
+      <p>Check the calendar below and find when your cohort session starts</p>
+      <div style="margin-bottom: 25px">
+        <select class="timezone_select">
+          <option value="local">Local</option></select
+        ><span style="margin-left: 10px"><i>(Select your timezone)</i></span>
+      </div>
+
+      <!-- CALENDAR RENDERS HERE -->
+      <div id="lonely_calendar"></div>
+    </section>
+
+    <section class="calendar_section" style="margin-top: 50px">
+      <p>
+        <b
+          >For the remaining twelve weeks, Jared meets with your cohort now
+          included with the larger group of program members at a new time.</b
+        >
+        And again includes a later session to benefit folks in later time zones.
+      </p>
+
+      <div style="margin-bottom: 25px">
+        <select class="timezone_select">
+          <option value="local">Local</option></select
+        ><span style="margin-left: 10px"><i>(Select your timezone)</i></span>
+      </div>
+      <!-- CALENDAR RENDERS HERE -->
+      <div id="group_calendar"></div>
+    </section>
+
+    <section class="calendar_section" style="margin-top: 50px">
+      <p>
+        <b
+          >At the end of the program you’ll have a wrap-up session with Jared
+          and your cohort or program members.</b
+        >
+      </p>
+      <div style="margin-bottom: 25px">
+        <select class="timezone_select">
+          <option value="local">Local</option></select
+        ><span style="margin-left: 10px"><i>(Select your timezone)</i></span>
+      </div>
+      <!-- CALENDAR RENDERS HERE -->
+      <div id="wrapup_calendar"></div>
+    </section>
+
+    <section style="background-color: rgb(211,211,211, .3); margin-top: 50px;">
+      <div style="max-width: 1000px; margin: auto; padding-top: 75px; padding-bottom: 50px;">
+        <h2>What Your Time in the Program Looks Like</h2>
+        <p>
+          <b
+            >Overall you can expect to spend from 90 minutes to 2 hours each
+            week.
+          </b>
+        </p>
+        <p>
+          Each week starts off with a recorded topic session you watch on your
+          own time, followed by the Live Lab schedule above.
+        </p>
+        <p>
+          Each live lab session is recorded, so you can catch up by watching the
+          recording if you miss it. We usually have the recordings posted within
+          24 hours. If you have questions, you can put them in the discussion
+          area in our community space.
+        </p>
+        <p>
+          Each week, there’s also a video about the topic to watch at your
+          convenience and some homework to prepare for the labs. The videos are
+          usually about 45 minutes long, and the homework can take 20 - 40
+          minutes.
+        </p>
+        <p>
+          We integrate the content into the work you're already doing for your
+          job, so it doesn't feel like a lot of extra work added to your day.
+          Instead, it feels like you have tailored coaching support for the work
+          you're already doing.
+        </p>
+        <p>Ready to invest in your future? Enroll in our next cohort today.</p>
+      </div>
+    </section>
+  </body>
+</html>

@@ -176,7 +176,7 @@ p, ul{
     }
 }
 
-#calendar_section {
+.calendar_section {
     max-width: 1000px;
     margin: auto;
 }
